@@ -137,7 +137,7 @@ function App() {
             <SpotlightCard className="group border border-white/10 bg-zinc-900/80 p-8 rounded-3xl h-full flex flex-col hover:border-orange-500/30 transition-colors text-left" spotlightColor="rgba(247, 169, 85, 0.15)">
               <div className="bg-orange-900/20 p-3 rounded-xl w-fit mb-6"><PlayCircle className="text-orange-400" size={28} /></div>
               <h3 className="text-2xl font-bold text-white mb-3">Multimedia Player</h3>
-              <p className="text-slate-400 mb-6 flex-grow">Aplicación desarrollada para la asignatura Multimedia, en el que crear, gestionar y visualizar playlists de arhcivos audiovisuales locales con la posibilidad de conversión a vídeo de la playlist.</p>
+              <p className="text-slate-400 mb-6 flex-grow">Aplicación desarrollada para la asignatura Multimedia, en el que crear, gestionar y visualizar playlists de archivos audiovisuales locales con la posibilidad de conversión a vídeo de la playlist.</p>
               <div className="flex gap-2 mb-6 flex-wrap">
                 <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">C#</span>
                 <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">.NET</span>
@@ -149,7 +149,7 @@ function App() {
             <SpotlightCard className="group border border-white/10 bg-zinc-900/80 p-8 rounded-3xl h-full flex flex-col hover:border-green-500/30 transition-colors text-left" spotlightColor="rgba(104, 247, 85, 0.31)">
               <div className="bg-green-900/20 p-3 rounded-xl w-fit mb-6"><Music className="text-green-400" size={28} /></div>
               <h3 className="text-2xl font-bold text-white mb-3">Gramola virtual</h3>
-              <p className="text-slate-400 mb-6 flex-grow">Gramola virtual para reproducir música a través de la API de spotify integrando un sistema de pagos experimental para la asignatura de Tecnologías y Sistemas Web.</p>
+              <p className="text-slate-400 mb-6 flex-grow">Gramola virtual para reproducir música a través de la API de Spotify integrando un sistema de pagos experimental para la asignatura de Tecnologías y Sistemas Web.</p>
               <div className="flex gap-2 mb-6 flex-wrap">
                 <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">Java</span>
                 <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">Angular</span>
