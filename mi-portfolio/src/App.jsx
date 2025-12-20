@@ -118,7 +118,7 @@ function App() {
               Aprendo y me adapto rápido a entornos cambiantes, creando soluciones efectivas.
             </h2>
             <p className="text-slate-300 leading-relaxed mb-4">
-              Nacido en 2004 y originario de Calzada de Calatrava, Ciudad Real, actualmente curso el último año del Grado en Ingeniería Informática en la Universidad de Castilla-La Mancha (UCLM). Mi pasión por la tecnología y la programación me ha llevado a especializarme en el desarrollo FullStack, donde disfruto creando interfaces intuitivas y experiencias de usuario atractivas.
+              Nacido en 2004 y originario de Calzada de Calatrava, Ciudad Real, actualmente curso el último año del Grado en Ingeniería Informática en bilingüe en la Universidad de Castilla-La Mancha (UCLM). Mi pasión por la tecnología y la programación me ha llevado a especializarme en el desarrollo FullStack, donde disfruto creando interfaces intuitivas y experiencias de usuario atractivas.
             </p>
             <p className="text-slate-300 leading-relaxed">
               Me muevo con facilidad entre distintas herramientas, tenga experiencia con ellas o esté aprendiendo sobre la marcha. Me entusiasma enfrentarme a nuevos retos y colaborar en proyectos que me permitan crecer profesionalmente y aportar valor real.
