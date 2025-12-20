@@ -75,6 +75,18 @@
   overflow: hidden;
 }
 
+@media (max-width: 640px) {
+  .pc-card-wrapper {
+    max-width: 92vw;
+  }
+
+  .pc-card {
+    width: min(92vw, 420px);
+    height: auto;
+    max-height: none;
+  }
+}
+
 .pc-card:hover,
 .pc-card.active {
   transition: none;

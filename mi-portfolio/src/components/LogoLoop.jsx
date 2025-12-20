@@ -232,7 +232,7 @@ export const LogoLoop = memo(
       () =>
         cx(
           'relative group',
-          isVertical ? 'overflow-hidden h-full inline-block' : 'overflow-x-hidden',
+          isVertical ? 'overflow-hidden h-full inline-block' : 'overflow-visible',
           '[--logoloop-gap:32px]',
           '[--logoloop-logoHeight:28px]',
           '[--logoloop-fadeColorAuto:#ffffff]',
@@ -258,7 +258,7 @@ export const LogoLoop = memo(
               className={cx(
                 'flex-none text-[length:var(--logoloop-logoHeight)] leading-[1]',
                 isVertical ? 'mb-[var(--logoloop-gap)]' : 'mr-[var(--logoloop-gap)]',
-                scaleOnHover && 'overflow-visible group/item'
+                'overflow-visible group/item'
               )}
               key={key}
               role="listitem"
@@ -283,26 +283,33 @@ export const LogoLoop = memo(
             {item.node}
           </span>
         ) : (
-          <img
-            className={cx(
-              'h-[var(--logoloop-logoHeight)] w-auto block object-contain',
-              '[-webkit-user-drag:none] pointer-events-none',
-              '[image-rendering:-webkit-optimize-contrast]',
-              'motion-reduce:transition-none',
-              scaleOnHover &&
-                'transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/item:scale-120'
-            )}
-            src={item.src}
-            srcSet={item.srcSet}
-            sizes={item.sizes}
-            width={item.width}
-            height={item.height}
-            alt={item.alt ?? ''}
-            title={item.title}
-            loading="lazy"
-            decoding="async"
-            draggable={false}
-          />
+          <div className="relative group/tooltip flex items-center justify-center">
+            <img
+              className={cx(
+                'h-[var(--logoloop-logoHeight)] w-auto block object-contain',
+                '[-webkit-user-drag:none] pointer-events-none',
+                '[image-rendering:-webkit-optimize-contrast]',
+                'motion-reduce:transition-none',
+                scaleOnHover &&
+                  'transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/item:scale-120'
+              )}
+              src={item.src}
+              srcSet={item.srcSet}
+              sizes={item.sizes}
+              width={item.width}
+              height={item.height}
+              alt={item.alt ?? ''}
+              loading="lazy"
+              decoding="async"
+              draggable={false}
+            />
+            <div className="absolute opacity-0 group-hover/tooltip:opacity-100 transition-all duration-300 transform translate-y-2 group-hover/tooltip:translate-y-0 bottom-[120%] left-1/2 -translate-x-1/2 z-[9999] pointer-events-none">
+              <div className="relative bg-zinc-900 border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest py-1.5 px-3 rounded-lg shadow-2xl whitespace-nowrap backdrop-blur-xl">
+                {item.name || item.alt || 'Tech'}
+                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-zinc-900 border-b border-r border-white/20 transform rotate-45"></div>
+              </div>
+            </div>
+          </div>
         );
 
         const itemAriaLabel = isNodeItem ? (item.ariaLabel ?? item.title) : (item.alt ?? item.title);
@@ -331,7 +338,7 @@ export const LogoLoop = memo(
             className={cx(
               'flex-none text-[length:var(--logoloop-logoHeight)] leading-[1]',
               isVertical ? 'mb-[var(--logoloop-gap)]' : 'mr-[var(--logoloop-gap)]',
-              scaleOnHover && 'overflow-visible group/item'
+              'overflow-visible group/item'
             )}
             key={key}
             role="listitem"
@@ -342,7 +349,7 @@ export const LogoLoop = memo(
       },
       [isVertical, scaleOnHover, renderItem]
     );
-
+    
     const logoLists = useMemo(
       () =>
         Array.from({ length: copyCount }, (_, copyIndex) => (

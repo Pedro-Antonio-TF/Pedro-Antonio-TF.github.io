@@ -36,7 +36,7 @@ function App() {
         <Aurora colorStops={["#00d8ff", "#7cff67", "#00d8ff"]} speed={0.5} amplitude={1.0} />
       </div>
 
-      <main className="relative z-10 w-full max-w-5xl mx-auto px-6 flex flex-col items-center gap-24 py-20 pb-40">
+      <main className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center gap-16 md:gap-24 py-14 md:py-20 pb-28 md:pb-40">
         
         <section className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-items-center md:justify-items-start">
             
@@ -71,13 +71,13 @@ function App() {
                 avatarUrl="/yo.png"
                 iconUrl='/github.png'
                 // grainUrl='/?.png' // Textura de ruido opcional
-                innerGradient={"linear-gradient(145deg, rgba(6, 181, 212, 0.23) 0%, rgba(79, 179, 109, 0.4) 45%, rgba(113, 196, 255, 0.41) 100%)"}
+                innerGradient={"linear-gradient(145deg, rgba(6, 181, 212, 0.23) 0%, rgba(79, 179, 109, 0.4) 45%, rgba(198, 57, 254, 0.28) 100%)"}
                 behindGlowEnabled={true}
                 behindGlowColor={"rgba(0, 219, 117, 0.73) 66%"}
                 behindGlowSize={"50%"}
                 showUserInfo={true}
                 enableTilt={true}
-                enableMobileTilt={true}
+                enableMobileTilt={false} // El rendimiento en móviles se ve afectado
                 onContactClick={() => window.open('https://linkedin.com/in/pedro-antonio-trujillo-felipe-2954062aa/', '_blank') }
               />
             </div>
@@ -89,7 +89,7 @@ function App() {
           <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
             Tecnologías & Herramientas
           </h3>
-          <div className="w-full h-28 relative rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm overflow-hidden flex items-center">
+           <div className="w-full h-28 relative rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm overflow-hidden flex items-center">
              <LogoLoop 
                 logos={logos} 
                 direction="left" 
@@ -98,6 +98,51 @@ function App() {
                 gap={60} 
                 pauseOnHover={true} 
              />
+          </div>
+        </section>
+
+        {/* --- SOBRE MÍ --- */}
+        <section className="w-full grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-8 items-stretch">
+          <div className="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-xl shadow-cyan-500/5 h-full">
+            <div className="flex items-center gap-3 mb-4 text-cyan-300">
+              <Cpu size={22} />
+              <p className="text-sm font-semibold tracking-[0.1em] uppercase">Sobre mí</p>
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4 leading-tight">
+              Aprendo y me adapto rápido a entornos cambiantes, creando soluciones efectivas.
+            </h2>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              Nacido en 2004 y originario de Calzada de Calatrava, Ciudad Real, actualmente curso el último año del Grado en Ingeniería Informática en la Universidad de Castilla-La Mancha (UCLM). Mi pasión por la tecnología y la programación me ha llevado a especializarme en el desarrollo FullStack, donde disfruto creando interfaces intuitivas y experiencias de usuario atractivas.
+            </p>
+            <p className="text-slate-300 leading-relaxed">
+              Me muevo con facilidad entre distintas herramientas, tenga experiencia con ellas o esté aprendiendo sobre la marcha. Me entusiasma enfrentarme a nuevos retos y colaborar en proyectos que me permitan crecer profesionalmente y aportar valor real.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full">
+            <div className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5">
+              <p className="text-xs uppercase tracking-[0.15em] text-cyan-300 mb-2">Lo que aporto</p>
+              <ul className="text-slate-200 text-sm space-y-2 list-disc list-inside">
+                <li>Arquitectura clara y código mantenible.</li>
+                <li>Diseños responsivos centrados en el usuario.</li>
+                <li>Integración de APIs y despliegues cloud básicos.</li>
+                <li>Manejo de servidores y bases de datos.</li>
+                <li>Ideas innovadoras y enfoque en la mejora continua.</li>
+                <li>Colaboración efectiva en equipos multidisciplinarios.</li>
+                <li>Comunicación clara y habilidades interpersonales.</li>
+              </ul>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <p className="text-xs uppercase tracking-[0.15em] text-slate-400 mb-2">Más información</p>
+              <ul className="text-slate-200 text-sm space-y-2 list-disc list-inside">
+                <li>Título en C1 en inglés por Cambridge</li>
+                <li>Permiso de conducir B</li>
+                <li>Finalizando el último curso de Ingeniería Informática.</li>
+                <li>Realizando mi TFG: "Desarrollo de una aplicación de Realidad Virtual para la movilidad y Bienestar de pacientes de Hemodiálisis"</li>
+                <li>Buscando oportunidades de prácticas profesionales.</li>
+              </ul>
+            </div>
           </div>
         </section>
 
