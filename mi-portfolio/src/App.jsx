@@ -6,7 +6,7 @@ import LogoLoop from './components/LogoLoop';
 import SpotlightCard from './components/SpotlightCard';
 import ProfileCard from './components/ProfileCard';
 
-import { Github, Linkedin, FileText, Mail, Code, Terminal, Cpu, Globe, PlayCircle, Music } from 'lucide-react';
+import { Github, Linkedin, FileText, Mail, Code, Terminal, Cpu, Globe, PlayCircle, Music, Gamepad2 } from 'lucide-react';
 
 function App() {
   
@@ -27,6 +27,12 @@ function App() {
     { name: "HTML", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
     { name: "Docker", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
     { name: "CSS3", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+    { name: "Cisco Packet Tracer", src: "https://hurbad.com/wp-content/uploads/2021/12/Cisco-Packet-Tracer.png" },
+    { name: "C#", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+    { name: "Angular", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
+    { name: "WordPress", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
+    { name: "WireShark", src: "https://www.wireshark.org/_astro/wireshark-logo-big.CkRjSOaC_2eT4Ah.png" },
+    { name: "Metasploit Framework", src: "https://dashboard.snapcraft.io/site_media/appmedia/2022/08/metasploit-framework-logo.svg.png" },
   ];
 
   return (
@@ -190,7 +196,7 @@ function App() {
               <a href="https://github.com/Pedro-Antonio-Tr/Laboratorio-Multimedia" className="inline-flex items-center text-orange-400 font-medium text-sm group-hover:translate-x-1 transition-transform">Ver Repositorio →</a>
             </SpotlightCard>
 
-            {/* Proyecto 3 */}
+            {/* Proyecto 4 */}
             <SpotlightCard className="group border border-white/10 bg-zinc-900/80 p-8 rounded-3xl h-full flex flex-col hover:border-green-500/30 transition-colors text-left" spotlightColor="rgba(104, 247, 85, 0.31)">
               <div className="bg-green-900/20 p-3 rounded-xl w-fit mb-6"><Music className="text-green-400" size={28} /></div>
               <h3 className="text-2xl font-bold text-white mb-3">Gramola virtual</h3>
@@ -203,8 +209,59 @@ function App() {
               </div>
               <a href="" className="inline-flex items-center text-green-400 font-medium text-sm group-hover:translate-x-1 transition-transform">Repositorio aún no publicado</a>
             </SpotlightCard>
+
+            {/* Proyecto 5 */}
+            <SpotlightCard className="group border border-white/10 bg-zinc-900/80 p-8 rounded-3xl h-full flex flex-col hover:border-red-500/30 transition-colors text-left" spotlightColor="rgba(249, 64, 64, 0.31)">
+              <div className="bg-red-900/20 p-3 rounded-xl w-fit mb-6"><Music className="text-red-400" size={28} /></div>
+              <h3 className="text-2xl font-bold text-white mb-3">Fórmula 1 BBDD</h3>
+              <p className="text-slate-400 mb-6 flex-grow">Primer proyecto de Bases de Datos en el cual se simulaban (con una interfaz muy sencilla, aunque alto manejo de errores) carreras con el fin de practicar la Arquitectura en 3 capas y el acceso a base de datos.</p>
+              <div className="flex gap-2 mb-6 flex-wrap">
+                <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">SQL</span>
+                <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">C#</span>
+                <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">.NET</span>
+              </div>
+              <a href="https://github.com/Pedro-Antonio-Tr/Formula1" className="inline-flex items-center text-red-400 font-medium text-sm group-hover:translate-x-1 transition-transform">Ver Repositorio →</a>
+            </SpotlightCard>
+
+            {/* Proyecto 6 */}
+            <SpotlightCard className="group border border-white/10 bg-zinc-900/80 p-8 rounded-3xl h-full flex flex-col hover:border-yellow-500/30 transition-colors text-left" spotlightColor="rgba(250, 204, 21, 0.18)">
+              <div className="bg-yellow-900/20 p-3 rounded-xl w-fit mb-6"><Gamepad2 className="text-yellow-400" size={28} /></div>
+              <h3 className="text-2xl font-bold text-white mb-3">IPOkémon grupal</h3>
+              <p className="text-slate-400 mb-6 flex-grow">Proyecto de grupo realizado para la asignatura Interacción Persona Ordenador 2 en el que integramos diseños de Pokémon realizados por compañeros de clase para hacer una pokédex y un sistema de combate equilibrado. </p>
+              <div className="flex gap-2 mb-6 flex-wrap">
+                <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">C#</span>
+                <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">.NET</span>
+              </div>
+              <a href="" className="inline-flex items-center text-yellow-400 font-medium text-sm group-hover:translate-x-1 transition-transform">Repositorio aún no publicado</a>
+            </SpotlightCard>
           </div>
         </section>
+
+        <footer className="w-full pt-8 border-t border-white/10 text-center">
+          <p className="text-xs text-slate-500 leading-relaxed">
+            Hecho con{' '}
+            <a className="text-slate-400 hover:text-white transition-colors" href="https://react.dev/" target="_blank" rel="noreferrer noopener">
+              React
+            </a>
+            {', '}
+            <a className="text-slate-400 hover:text-white transition-colors" href="https://vite.dev/" target="_blank" rel="noreferrer noopener">
+              Vite
+            </a>
+            {', '}
+            <a className="text-slate-400 hover:text-white transition-colors" href="https://tailwindcss.com/" target="_blank" rel="noreferrer noopener">
+              Tailwind CSS
+            </a>
+            {', '}
+            <a className="text-slate-400 hover:text-white transition-colors" href="https://lucide.dev/" target="_blank" rel="noreferrer noopener">
+              Lucide
+            </a>
+            {' y recursos de '}
+            <a className="text-slate-400 hover:text-white transition-colors" href="https://reactbits.dev/" target="_blank" rel="noreferrer noopener">
+              React Bits
+            </a>
+            .
+          </p>
+        </footer>
 
       </main>
 
