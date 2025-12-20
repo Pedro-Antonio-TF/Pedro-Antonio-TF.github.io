@@ -85,6 +85,16 @@
     height: auto;
     max-height: none;
   }
+
+  .pc-avatar-content .avatar {
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    display: block;
+    object-fit: contain;
+    transform: translateX(-50%) translateZ(0);
+    transition: none;
+  }
 }
 
 .pc-card:hover,
