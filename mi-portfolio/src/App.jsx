@@ -6,7 +6,7 @@ import LogoLoop from './components/LogoLoop';
 import SpotlightCard from './components/SpotlightCard';
 import ProfileCard from './components/ProfileCard';
 
-import { Github, Linkedin, FileText, Mail, Code, Terminal, Cpu, Globe, PlayCircle, Music, Gamepad2 } from 'lucide-react';
+import { Github, Linkedin, FileText, Mail, Code, Terminal, Cpu, Globe, PlayCircle, Music, Gamepad2, Heart, Car } from 'lucide-react';
 
 function App() {
   
@@ -42,8 +42,9 @@ function App() {
         <Aurora colorStops={["#00d8ff", "#7cff67", "#00d8ff"]} speed={0.5} amplitude={1.0} />
       </div>
 
-      <main className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center gap-16 md:gap-24 py-14 md:py-20 pb-28 md:pb-40">
+      <main className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center gap-16 md:gap-24 py-14 md:py-20 pb-28 md:pb-40">
         
+        <div className="w-full max-w-5xl mx-auto">
         <section className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-items-center md:justify-items-start">
             
             <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 max-w-lg">
@@ -76,7 +77,7 @@ function App() {
                 contactText="Descarga mi CV"
                 avatarUrl="/yo.png"
                 iconUrl='/github.png'
-                // grainUrl='/?.png' // Textura de ruido opcional
+                // grainUrl='/?.png' // Textura de ruido añadible si encuentro una buena
                 innerGradient={"linear-gradient(145deg, rgba(6, 181, 212, 0.23) 0%, rgba(79, 179, 109, 0.4) 45%, rgba(198, 57, 254, 0.28) 100%)"}
                 behindGlowEnabled={true}
                 behindGlowColor={"rgba(0, 219, 117, 0.73) 66%"}
@@ -89,6 +90,7 @@ function App() {
             </div>
 
         </section>
+        </div>
 
         {/* --- STACK TECNOLÓGICO --- */}
         <section className="w-full flex flex-col items-center space-y-6">
@@ -112,35 +114,36 @@ function App() {
           <div className="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-xl shadow-cyan-500/5 h-full">
             <div className="flex items-center gap-3 mb-4 text-cyan-300">
               <Cpu size={22} />
-              <p className="text-sm font-semibold tracking-[0.1em] uppercase">Sobre mí</p>
+              <p className="text-sm font-semibold tracking-[0.1em] uppercase">Sobre mí:</p>
             </div>
             <h2 className="text-3xl font-bold text-white mb-4 leading-tight">
-              Aprendo y me adapto rápido a entornos cambiantes, creando soluciones efectivas.
+              Aprendo y me adapto rápido a distintos entornos o cambios.
             </h2>
             <p className="text-slate-300 leading-relaxed mb-4">
               Nacido en 2004 y originario de Calzada de Calatrava, Ciudad Real, actualmente curso el último año del Grado en Ingeniería Informática en bilingüe en la Universidad de Castilla-La Mancha (UCLM). Mi pasión por la tecnología y la programación me ha llevado a especializarme en el desarrollo FullStack, donde disfruto creando interfaces intuitivas y experiencias de usuario atractivas.
             </p>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              Me muevo con facilidad entre distintas herramientas, aprendiendo sobre la marcha si me resultan nuevas. 
+            </p>
             <p className="text-slate-300 leading-relaxed">
-              Me muevo con facilidad entre distintas herramientas, tenga experiencia con ellas o esté aprendiendo sobre la marcha. Me entusiasma enfrentarme a nuevos retos y colaborar en proyectos que me permitan crecer profesionalmente y aportar valor real.
+              Poseo pasión por los videojuegos y su desarrollo, la gestión de servidores domésticos, los puzles, el deporte, la música y el cine.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full">
             <div className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5">
-              <p className="text-xs uppercase tracking-[0.15em] text-cyan-300 mb-2">Lo que aporto</p>
+              <p className="text-xs uppercase tracking-[0.15em] text-cyan-300 mb-2">Lo que aporto:</p>
               <ul className="text-slate-200 text-sm space-y-2 list-disc list-inside">
                 <li>Arquitectura clara y código mantenible.</li>
                 <li>Diseños responsivos centrados en el usuario.</li>
-                <li>Integración de APIs y despliegues cloud básicos.</li>
                 <li>Manejo de servidores y bases de datos.</li>
-                <li>Ideas innovadoras y enfoque en la mejora continua.</li>
                 <li>Colaboración efectiva en equipos multidisciplinarios.</li>
                 <li>Comunicación clara y habilidades interpersonales.</li>
               </ul>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <p className="text-xs uppercase tracking-[0.15em] text-slate-400 mb-2">Más información</p>
+              <p className="text-xs uppercase tracking-[0.15em] text-slate-400 mb-2">Más información:</p>
               <ul className="text-slate-200 text-sm space-y-2 list-disc list-inside">
                 <li>Título en C1 en inglés por Cambridge</li>
                 <li>Permiso de conducir B</li>
@@ -157,7 +160,7 @@ function App() {
             <Code className="text-cyan-400" /> Proyectos Destacados
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {/* Proyecto 1 */}
             <SpotlightCard className="group border border-white/10 bg-zinc-900/80 p-8 rounded-3xl h-full flex flex-col hover:border-cyan-500/30 transition-colors text-left" spotlightColor="rgba(0, 216, 255, 0.15)">
               <div className="bg-cyan-900/20 p-3 rounded-xl w-fit mb-6"><Terminal className="text-cyan-400" size={28} /></div>
@@ -212,7 +215,7 @@ function App() {
 
             {/* Proyecto 5 */}
             <SpotlightCard className="group border border-white/10 bg-zinc-900/80 p-8 rounded-3xl h-full flex flex-col hover:border-red-500/30 transition-colors text-left" spotlightColor="rgba(249, 64, 64, 0.31)">
-              <div className="bg-red-900/20 p-3 rounded-xl w-fit mb-6"><Music className="text-red-400" size={28} /></div>
+              <div className="bg-red-900/20 p-3 rounded-xl w-fit mb-6"><Car className="text-red-400" size={28} /></div>
               <h3 className="text-2xl font-bold text-white mb-3">Fórmula 1 BBDD</h3>
               <p className="text-slate-400 mb-6 flex-grow">Primer proyecto de Bases de Datos en el cual se simulaban (con una interfaz muy sencilla, aunque alto manejo de errores) carreras con el fin de practicar la Arquitectura en 3 capas y el acceso a base de datos.</p>
               <div className="flex gap-2 mb-6 flex-wrap">
@@ -233,6 +236,53 @@ function App() {
                 <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">.NET</span>
               </div>
               <a href="" className="inline-flex items-center text-yellow-400 font-medium text-sm group-hover:translate-x-1 transition-transform">Repositorio aún no publicado</a>
+            </SpotlightCard>
+
+            {/* Proyecto 7 */}
+            <SpotlightCard className="group border border-white/10 bg-zinc-900/80 p-8 rounded-3xl h-full flex flex-col hover:border-cyan-500/30 transition-colors text-left" spotlightColor="rgba(21, 227, 250, 0.18)">
+              <div className="bg-cyan-900/20 p-3 rounded-xl w-fit mb-6"><Globe className="text-cyan-400" size={28} /></div>
+              <h3 className="text-2xl font-bold text-white mb-3">ISI Alfatrip</h3>
+              <p className="text-slate-400 mb-6 flex-grow">
+                Proyecto de grupo realizado para la asignatura Integración de Sistemas Informáticos en el que se ha creado una solución web que integra las APIs de Google Flights, Google Hotels y OpenStreetMap. La solución de muestra se encuentra disponible en la página web{' '}
+                <a
+                  href="https://isi-alfatrip.onrender.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                >
+                  isi-alfatrip.onrender.com
+                </a>
+                .
+              </p>
+              <div className="flex gap-2 mb-6 flex-wrap">
+                <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">HTML</span>
+                <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">Python</span>
+                <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">CSS</span>
+                <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">Docker</span>
+              </div>
+              <a href="https://github.com/lauradiazmondejar/isi-alfatrip" className="inline-flex items-center text-cyan-400 font-medium text-sm group-hover:translate-x-1 transition-transform">Ver Repositorio →</a>
+            </SpotlightCard>
+
+            {/* Proyecto 8 */}
+            <SpotlightCard className="group border border-white/10 bg-zinc-900/80 p-8 rounded-3xl h-full flex flex-col hover:border-green-500/30 transition-colors text-left" spotlightColor="rgba(104, 247, 85, 0.18)">
+              <div className="bg-green-900/20 p-3 rounded-xl w-fit mb-6"><Heart className="text-green-400" size={28} /></div>
+              <h3 className="text-2xl font-bold text-white mb-3">Asociación Iker (WordPress)</h3>
+              <p className="text-slate-400 mb-6 flex-grow">
+                Proyecto de grupo realizado para la asignatura Comercio Electrónico: desarrollo de una nueva solución web en WordPress para la Asociación Iker. Enlace accesible para la asociación:{' '}
+                <a
+                  href="https://asociacioniker.org"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-green-400 hover:text-green-300 transition-colors"
+                >
+                  asociacioniker.org
+                </a>
+                {' '}(la web actual publicada no corresponde a la desarrollada en el proyecto).
+              </p>
+              <div className="flex gap-2 mb-6 flex-wrap">
+                <span className="text-xs bg-white/10 px-2 py-1 rounded text-slate-300">WordPress</span>
+              </div>
+              <span className="inline-flex items-center text-green-400 font-medium text-sm group-hover:translate-x-1 transition-transform">Repositorio aún no accesible</span>
             </SpotlightCard>
           </div>
         </section>
