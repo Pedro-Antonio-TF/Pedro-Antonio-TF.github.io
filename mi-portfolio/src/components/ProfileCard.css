@@ -343,14 +343,15 @@
 
 .pc-handle {
   font-size: 14px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  color: rgb(0, 0, 0);
   line-height: 1;
 }
 
 .pc-status {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+  font-weight: 800;
+  color: rgb(0, 0, 0);
   line-height: 1;
 }
 
@@ -407,18 +408,23 @@
 }
 
 .pc-details p {
-  font-weight: 600;
+  font-weight: 800;
   position: relative;
   top: -12px;
   white-space: nowrap;
   font-size: 16px;
   margin: 0 auto;
   width: min-content;
-  background-image: linear-gradient(to bottom, #fff, #4a4ac0);
-  background-size: 1em 1.5em;
+  
+  background-image: linear-gradient(to bottom, #ffffff 30%, #cca3ff 100%);
+  
+  background-size: 100%;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.9));
+  
 }
 
 @keyframes glow-bg {

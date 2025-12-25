@@ -63,17 +63,17 @@ function App() {
               </h1>
               
               <p className="text-lg text-slate-400 leading-relaxed">
-                Ingeniero Informático en formación. Transformo ideas complejas en experiencias web fluidas, especializándome en <span className="text-white font-semibold">Experiencias Interactivas</span> y <span className="text-white font-semibold">Desarrollo FullStack</span>.
+                Ingeniero Informático en formación. Aprendo rápido y tengo experiencia en <span className="text-white font-semibold">Desarrollo Fullstack</span>. Actualmente me encuentro en búsqueda de <span className="text-white font-semibold">Prácticas curriculares</span>.
               </p>
             </div>
 
             <div className="w-full flex justify-center md:justify-end">
               <ProfileCard
                 name="Pedro A. Trujillo"
-                title="Ingeniero en Informática"
+                title="Estudiante de Ingeniería en Informática"
                 handle="Pedro_Ant_Trufe"
                 status="Online"
-                contactText="Contáctame"
+                contactText="Descarga mi CV"
                 avatarUrl="/yo.png"
                 iconUrl='/github.png'
                 // grainUrl='/?.png' // Textura de ruido opcional
@@ -84,7 +84,7 @@ function App() {
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false} // El rendimiento en móviles se ve afectado
-                onContactClick={() => window.open('https://linkedin.com/in/pedro-antonio-trujillo-felipe-2954062aa/', '_blank') }
+                onContactClick={() => window.open('/CV.pdf', '_blank') }
               />
             </div>
 
