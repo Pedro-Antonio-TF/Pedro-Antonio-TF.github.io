@@ -6,7 +6,7 @@ import LogoLoop from './components/LogoLoop';
 import SpotlightCard from './components/SpotlightCard';
 import ProfileCard from './components/ProfileCard';
 
-import { Github, Linkedin, FileText, Mail, Code, Terminal, Cpu, Globe, PlayCircle, Music, Gamepad2, Heart, Car } from 'lucide-react';
+import { Github, Linkedin, FileText, Mail, Code, Terminal, Cpu, Globe, PlayCircle, Music, Gamepad2, Heart, Car, GraduationCap, Award, BookOpen, Layers } from 'lucide-react';
 
 function App() {
   
@@ -27,11 +27,11 @@ function App() {
     { name: "HTML", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
     { name: "Docker", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
     { name: "CSS3", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-    { name: "Cisco Packet Tracer", src: "https://hurbad.com/wp-content/uploads/2021/12/Cisco-Packet-Tracer.png" },
+    { name: "Cisco Packet Tracer", src: "https://api.iconify.design/simple-icons:cisco.svg?color=%231BA0D7" }, 
     { name: "C#", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
     { name: "Angular", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
     { name: "WordPress", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
-    { name: "WireShark", src: "https://www.wireshark.org/_astro/wireshark-logo-big.CkRjSOaC_2eT4Ah.png" },
+    { name: "WireShark", src: "https://api.iconify.design/logos:wireshark.svg" },
     { name: "Metasploit Framework", src: "https://dashboard.snapcraft.io/site_media/appmedia/2022/08/metasploit-framework-logo.svg.png" },
   ];
 
@@ -64,14 +64,14 @@ function App() {
               </h1>
               
               <p className="text-lg text-slate-400 leading-relaxed">
-                Ingeniero Informático en formación. Aprendo rápido y tengo experiencia en <span className="text-white font-semibold">Desarrollo Fullstack</span>. Actualmente me encuentro en búsqueda de <span className="text-white font-semibold">Prácticas curriculares</span>.
+                Titulado en ingeniería en informática en bilingüe y estudiante de máster en Ingeniería Informática. Aprendo rápido y tengo experiencia en <span className="text-white font-semibold">Desarrollo Fullstack</span>. Actualmente me encuentro en búsqueda de <span className="text-white font-semibold">Prácticas curriculares</span>.
               </p>
             </div>
 
             <div className="w-full flex justify-center md:justify-end">
               <ProfileCard
                 name="Pedro A. Trujillo"
-                title="Estudiante de Ingeniería en Informática"
+                title="Titulado en Ingeniería en Informática"
                 handle="Pedro_Ant_Trufe"
                 status="Online"
                 contactText="Descarga mi CV"
@@ -147,17 +147,67 @@ function App() {
               <ul className="text-slate-200 text-sm space-y-2 list-disc list-inside">
                 <li>Título en C1 en inglés por Cambridge</li>
                 <li>Permiso de conducir B</li>
-                <li>Finalizando el último curso de Ingeniería Informática.</li>
-                <li>Realizando mi TFG: "Desarrollo de una aplicación de Realidad Virtual para la movilidad y Bienestar de pacientes de Hemodiálisis"</li>
                 <li>Buscando oportunidades de prácticas profesionales.</li>
               </ul>
             </div>
           </div>
         </section>
 
+      {/* --- PROYECTO DESTACADO (TFG) --- */}
+        <section className="w-full mb-16">
+          <h2 className="text-3xl font-bold mb-10 text-white flex items-center justify-center md:justify-start gap-3">
+            <GraduationCap className="text-cyan-400" size={32} /> Proyecto Destacado
+          </h2>
+          
+          <SpotlightCard className="group border border-cyan-500/30 bg-zinc-900/80 p-8 md:p-10 rounded-3xl w-full flex flex-col text-left" spotlightColor="rgba(0, 216, 255, 0.15)">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+              <div className="bg-cyan-900/20 p-4 rounded-2xl w-fit">
+                <Award className="text-cyan-400" size={36} />
+              </div>
+              <div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-bold tracking-wide">
+                 Calificación Final: 9.8 (Sobresaliente)
+              </div>
+            </div>
+            
+            <h3 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
+              Trabajo Fin de Grado: Desarrollo de una aplicación de Realidad Virtual para la ejercitación de pacientes renales de hemodiálisis.
+            </h3>
+            
+            <p className="text-slate-300 mb-8 text-lg md:text-xl leading-relaxed max-w-4xl">
+              Desarrollo integral de aplicaciones de ejercicio gamificado en Realidad Virtual, incluyendo un <em>Arkanoid VR</em> y un juego de ritmo centrado en el tren inferior en colaboración con el Hospital General Universitario de Ciudad Real. El proyecto se completó con la arquitectura de un backend diseñado para la recolección de telemetría clínica destinada a pacientes de hemodiálisis y un frontend desarrollado para la visualización de los datos por parte de los enfermeros.
+            </p>
+            
+            <div className="flex gap-3 mb-10 flex-wrap">
+              <span className="text-sm font-medium bg-white/10 px-4 py-2 rounded-xl text-slate-200">Realidad Virtual</span>
+              <span className="text-sm font-medium bg-white/10 px-4 py-2 rounded-xl text-slate-200">Meta Quest 3</span>
+              <span className="text-sm font-medium bg-white/10 px-4 py-2 rounded-xl text-slate-200">Game Development</span>
+              <span className="text-sm font-medium bg-white/10 px-4 py-2 rounded-xl text-slate-200">Backend</span>
+              <span className="text-sm font-medium bg-white/10 px-4 py-2 rounded-xl text-slate-200">Telemetría Médica</span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-auto">
+              <a href="/Memoria_TFG.pdf" target="_blank" className="flex items-center justify-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-3.5 rounded-xl font-medium transition-all hover:scale-105">
+                <BookOpen size={20} /> Memoria TFG
+              </a>
+              <a href="https://github.com/Pedro-Antonio-Tr/backend-tfg-pedroantonio" target="_blank" className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white px-4 py-3.5 rounded-xl transition-colors text-sm">
+                <Github size={18} /> Backend Telemetría
+              </a>
+              <a href="https://github.com/Pedro-Antonio-Tr/ArkanoidVR-TFG" target="_blank" className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white px-4 py-3.5 rounded-xl transition-colors text-sm">
+                <Github size={18} /> Arkanoid VR
+              </a>
+              <a href="https://github.com/Pedro-Antonio-Tr/Piernas-VRitmicas-TFG" target="_blank" className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white px-4 py-3.5 rounded-xl transition-colors text-sm">
+                <Github size={18} /> Juego de Ritmo
+              </a>
+              <a href="https://github.com/Pedro-Antonio-Tr/frontend-tfg-pedroantonio" target="_blank" className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white px-4 py-3.5 rounded-xl transition-colors text-sm">
+                <Github size={18} /> Frontend Telemetría
+              </a>
+            </div>
+          </SpotlightCard>
+        </section>
+
         <section className="w-full">
           <h2 className="text-3xl font-bold mb-10 text-white flex items-center justify-center md:justify-start gap-3">
-            <Code className="text-cyan-400" /> Proyectos Destacados
+            <Code className="text-cyan-400" /> Otros proyectos
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
