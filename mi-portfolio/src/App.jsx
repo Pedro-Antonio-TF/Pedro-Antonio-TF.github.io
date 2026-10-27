@@ -27,11 +27,12 @@ function App() {
     { name: "HTML", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
     { name: "Docker", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
     { name: "CSS3", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-    { name: "Cisco Packet Tracer", src: "https://api.iconify.design/simple-icons:cisco.svg?color=%231BA0D7" }, 
+    { name: "Cisco Packet Tracer", src: "https://api.iconify.design/simple-icons/cisco.svg?color=%231BA0D7" }, 
     { name: "C#", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
     { name: "Angular", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
     { name: "WordPress", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
-    { name: "WireShark", src: "https://api.iconify.design/logos:wireshark.svg" },
+    { name: "WireShark", src: "https://api.iconify.design/logos/wireshark.svg" }, 
+    { name: "Unity", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" },
     { name: "Metasploit Framework", src: "https://dashboard.snapcraft.io/site_media/appmedia/2022/08/metasploit-framework-logo.svg.png" },
   ];
 
