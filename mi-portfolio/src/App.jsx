@@ -31,7 +31,7 @@ function App() {
     { name: "C#", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
     { name: "Angular", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
     { name: "WordPress", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
-    { name: "WireShark", src: "https://api.iconify.design/logos/wireshark.svg" }, 
+    { name: "WireShark", src: "https://www.vectorlogo.zone/logos/wireshark/wireshark-icon.svg" },
     { name: "Unity", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" },
     { name: "Metasploit Framework", src: "https://dashboard.snapcraft.io/site_media/appmedia/2022/08/metasploit-framework-logo.svg.png" },
   ];
